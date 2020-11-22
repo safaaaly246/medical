@@ -1,0 +1,18 @@
+<div class="wrapper">
+  <form class="login" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <p class="title">Log in</p>
+    <input type="text" placeholder="Username" autofocus formControlName="name" />
+    <i class="fa fa-user"></i>
+    <p *ngIf="userName.invalid&&userName.touched" class="error">pleaes write correct name </p>
+    <input type="password" placeholder="Password" formControlName="password" />
+    <i class="fa fa-key"></i>
+    <p *ngIf="userPassword.invalid&&userPassword.touched" class="error">pleaes write correct password </p>
+
+    <a href="#">Forgot your password?</a>
+    <button  type="submit" [disabled]="myForm.invalid">
+      <i class="spinner"></i>
+      <span class="state">Log in</span>
+    </button>
+  </form>
+
+</div>
