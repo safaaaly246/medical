@@ -5,12 +5,12 @@ import { HomeRoutingModule } from './home-routing.module';
 import { NavComponent } from '../../nav/nav.component';
 
 import { FooterComponent } from '../../footer/footer.component';
-import { MainComponent } from './main/main.component';
+import { HomeComponent } from './home.component';
 
 @NgModule({
   declarations: [
-    FooterComponent ,
-    MainComponent ,
+    FooterComponent,
+    HomeComponent,
     NavComponent
   ],
   imports: [
