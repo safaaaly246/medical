@@ -18,14 +18,16 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HighlightDirective } from './highlight.directive';
 
-
+import { FooterComponent } from './footer/footer.component';
+import {NavComponent} from './nav/nav.component'
 @NgModule({
   declarations: [
     AppComponent,
-
     LoginComponent,
     NotFoundComponent,
-    HighlightDirective
+    HighlightDirective,
+    FooterComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,

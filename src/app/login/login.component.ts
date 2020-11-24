@@ -8,15 +8,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  myForm:FormGroup;
-  constructor( private fb : FormBuilder ,
-    private router : Router,
+  myForm: FormGroup;
+  constructor(private fb: FormBuilder,
+    private router: Router,
 
-    ) {
+  ) {
 
     this.myForm = this.fb.group({
       name: ['', [Validators.required, Validators.pattern('[a-z]{6,}')]],
-      password:['', [Validators.required, Validators.pattern('[0-9]{8}')]]
+      password: ['', [Validators.required, Validators.pattern('[0-9]{8}')]]
     });
 
 
@@ -25,15 +25,15 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
 
   }
-  onSubmit(){
+  onSubmit() {
     console.log(this.myForm.value);
-    this.router.navigate(['/main'])
+    this.router.navigate(['/home'])
 
   }
-  get userName(){
-     return this.myForm.get('name')
-    }
-    get userPassword(){
-      return this.myForm.get('password')
-     }
+  get userName() {
+    return this.myForm.get('name')
+  }
+  get userPassword() {
+    return this.myForm.get('password')
+  }
 }
