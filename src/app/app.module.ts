@@ -16,6 +16,7 @@ import { environment } from '../environments/environment';
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { HighlightDirective } from './highlight.directive';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     AppComponent,
 
     LoginComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
